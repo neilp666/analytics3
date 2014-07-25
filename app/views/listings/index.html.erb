@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="center">
+        <h1>Find a Great Job in the Web Analytics Industry</h1>
+          <h2>We only show open analytics jobs to make your search easy</h2>
+          <h3>Follow us on Twitter <span class="emphasis">@WorkinAnalytics</span> </h3>
+          <br>
+           <%= link_to "Post a job Today: $169 for 45 days", new_listing_path , class: "btn btn-danger btn-lg" %>
+    </div>
+</div>
+<br/>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Job</th>
+      <th>Description</th>
+      <th>Location</th>
+      <th>Apply</th>
+      <th>Company</th>
+      <th>Url</th>
+      <th>About</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @listings.each do |listing| %>
+      <tr>
+        <td><%= listing.job %></td>
+        <td><%= listing.description %></td>
+        <td><%= listing.location %></td>
+        <td><%= listing.apply %></td>
+        <td><%= listing.company %></td>
+        <td><%= listing.url %></td>
+        <td><%= listing.about %></td>
+        <td><%= link_to 'Show', listing %></td>
+        <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
+        <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Listing', new_listing_path %>

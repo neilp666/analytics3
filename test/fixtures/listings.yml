@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  job: MyString
+  description: MyText
+  location: MyString
+  apply: MyString
+  company: MyString
+  url: MyString
+  about: MyText
+
+two:
+  job: MyString
+  description: MyText
+  location: MyString
+  apply: MyString
+  company: MyString
+  url: MyString
+  about: MyText
