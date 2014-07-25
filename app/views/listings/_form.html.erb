@@ -11,35 +11,35 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :job %><br>
-    <%= f.text_field :job %>
+  <div class="form-group">
+    <%= f.label :job %>
+    <%= f.text_field :job, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :location %><br>
-    <%= f.text_field :location %>
+  <div class="form-group">
+    <%= f.label :location %>
+    <%= f.text_field :location, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :apply %><br>
-    <%= f.text_field :apply %>
+  <div class="form-group">
+    <%= f.label :apply %>
+    <%= f.text_field :apply, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :company %><br>
-    <%= f.text_field :company %>
+  <div class="form-group">
+    <%= f.label :company %>
+    <%= f.text_field :company, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :url %><br>
-    <%= f.text_field :url %>
+  <div class="form-group">
+    <%= f.label :url %>
+    <%= f.text_field :url , class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :about %><br>
-    <%= f.text_area :about %>
+  <div class="form-group">
+    <%= f.label :about %>
+    <%= f.text_area :about, class: "form-control" %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <%= f.submit  class: "btn btn-primary" %>
   </div>
 <% end %>
