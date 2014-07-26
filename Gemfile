@@ -10,6 +10,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
+gem 'paperclip', github: 'thoughtbot/paperclip'
+gem "paperclip-dropbox", ">= 1.1.7"
+gem "figaro"
 
 group :production do
   gem 'pg'

@@ -5,6 +5,12 @@
   <%= @listing.job %>
 </p>
 
+
+<p>
+  <strong>logo:</strong>
+<%= image_tag @listing.image.url(:thumb) %>
+</p>
+
 <p>
   <strong>Description:</strong>
   <%= @listing.description %>

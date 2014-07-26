@@ -12,7 +12,8 @@
 <table class="table">
   <thead>
     <tr>
-      <th>Job</th>
+      <th>logo</th>
+      <th>job</th>
       <th>Description</th>
       <th>Location</th>
       <th>Apply</th>
@@ -28,6 +29,7 @@
   <tbody>
     <% @listings.each do |listing| %>
       <tr>
+        <td><%= image_tag listing.image.url(:thumb) %></td>
         <td><%= listing.job %></td>
         <td><%= listing.description %></td>
         <td><%= listing.location %></td>
