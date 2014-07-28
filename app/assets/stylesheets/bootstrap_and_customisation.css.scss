@@ -1,14 +1,14 @@
 @import "bootstrap";
 
-h2 { font-family: 'Helvetica Neue', Helvetica;
-	font-weight: 100; }
-    
+h1 {
+  font-family:  Helvetica, arial, serif;
+}
 
-h3 { font-family: 'Helvetica Neue', Helvetica;
+h2, h3 { font-family:  Helvetica;
 	font-weight: 100;
-    font-size: 26px;
-	}
+  	font-size: 26px;
 
+}
 
 .emphasis {
   color: red;

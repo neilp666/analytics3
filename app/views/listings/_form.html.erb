@@ -1,7 +1,8 @@
 <%= form_for @listing, :html => { :multipart => true } do |f| %>
   <% if @listing.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
+    <div id="error_explanation" class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <h4><%= pluralize(@listing.errors.count, "error") %> prohibited this listing from being saved:</h4>
 
       <ul>
       <% @listing.errors.full_messages.each do |msg| %>
@@ -11,37 +12,58 @@
     </div>
   <% end %>
 
+  <h4>Your job listing will remain for 45 days. After 45 days your job listing will expire and be removed.</h4>
+  <br/>
+  <h3><b>1. Tell us about the position.</b></h3>
+  <br/>
+
   <div class="form-group">
-    <%= f.label :job %>
-    <%= f.text_field :job, class: "form-control" %>
+    <%= f.label "Job Title" %>
+    <%= f.text_field :job, class: "form-control", autofocus: true, placeholder: "E.g Analytics Manager" %>
   </div>
   <div class="form-group">
-    <%= f.label :description %>
+    <%= f.label "Job Description" %>
     <%= f.text_area :description, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :location %>
-    <%= f.text_field :location, class: "form-control" %>
+    <%= f.label "Location" %>
+    <%= f.text_field :location, class: "form-control", placeholder: "E.g London" %>
   </div>
   <div class="form-group">
-    <%= f.label :apply %>
-    <%= f.text_field :apply, class: "form-control" %>
+    <%= f.label "How does the candidate apply" %>
+    <%= f.text_field :apply, class: "form-control", placeholder: "E.g Send a C.V to neil@company.com" %>
+  </div>
+
+  <h3><b>2. Tell us about your company or recruitment agency</b></h3>
+  <br/>
+  <div class="form-group">
+    <%= f.label "Your Company Name" %>
+    <%= f.text_field :company, class: "form-control", placeholder: "E.g Google"  %>
   </div>
   <div class="form-group">
-    <%= f.label :company %>
-    <%= f.text_field :company, class: "form-control" %>
-  </div>
-  <div class="form-group">
+    <%= f.label "Upload Company Logo If You Want" %>
     <%= f.file_field :image, class: "form-control" %>
   </div>
+
   <div class="form-group">
-    <%= f.label :url %>
-    <%= f.text_field :url , class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :about %>
+    <%= f.label "Tell Us About Your Business 25-30 chars max" %>
     <%= f.text_area :about, class: "form-control" %>
   </div>
+
+  <div class="form-group">
+    <%= f.label "Company Website" %>
+    <%= f.text_field :url , class: "form-control", placeholder: "E.g www.google.com"  %>
+  </div>
+
+
+
+  <h3><b>3. Enter Your Credit Card Information</b></h3>
+
+  <div class="form-group">
+    <%= f.label "Email to send the reciept to" %>
+    <%= f.text_field :email, class: "form-control", placeholder: "E.g john@google.com"  %>
+  </div>
+  
   <div class="form-group">
     <%= f.submit  class: "btn btn-primary" %>
   </div>
