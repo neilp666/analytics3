@@ -13,7 +13,6 @@
     <% @listings.each do |listing| %>
       <tr>
         <td><h3><%= listing.company %></h3></td>
-       
         <td><h3><%= link_to listing.job, listing %></h3></td>
         <td><h3><%= listing.created_at.strftime("%B %-d, %Y") %></h3></td>
         <td><%= link_to 'Show', listing %></td>
