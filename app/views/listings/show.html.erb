@@ -3,7 +3,7 @@
         <p class="lead blog-description"><b>Posted on</b> <%= @listing.created_at.strftime("%B %-d, %Y") %></p>
         <h4><%= @listing.company %></h4>
         <h4><%= @listing.location %></h4>
-        <h4><%= link_to @listing.url %></h4> 
+        <h4><%= link_to @listing.url, @listing.url %></h4> 
       </div>
 
       <div class="row">
@@ -16,7 +16,7 @@
             <hr>
            
             <h4><b>How to Apply</b></h4>
-            <p>Send email to:  <%= @listing.email %> </p>
+            <p><%= @listing.apply %> </p>
           </div><!-- /.blog-post -->
         </div><!-- /.blog-main -->
 
